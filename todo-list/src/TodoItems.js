@@ -10,7 +10,7 @@ export default function TodoItems({ entries, deleteItem }){
                     className="px-2 mt-1 mb-1 ms-2"
                     key={id}
                     onClick={() =>{
-                    deleteItem(id);
+                    deleteItem(id); 
                 }}
                 >
                     {text}

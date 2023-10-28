@@ -1,10 +1,21 @@
 window.onload = () =>{
     const rootElement = document.getElementById("root");
-    const ints = [2,4,6,8,10,12];
+    const root = ReactDOM.createRoot(rootElement);
 
-    ints.forEach(i => {
-        let li = document.createElement("li");
-        li.innerHTML = i;
-        rootElement.appendChild(li);
-    });
+    const ints = [1,2,3];
+
+    childrenElements.push(
+        React.createElement("li",{key: ints[0]}, ints[0])
+    );
+
+    childrenElements.push(
+        React.createElement("li",{key: ints[1]}, ints[1])
+    );
+
+    childrenElements.push(
+        React.createElement("li",{key:ints[2]}, ints[2])
+    );
+
+    root.render(childrenElements);
+
 } ;

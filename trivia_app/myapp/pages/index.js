@@ -11,15 +11,15 @@ export default function Home() {
       ints.map(id => {
         return(
           <li key={id}>{id}</li>
-        )
+        ) 
       })
      }
       </>
     )
   }
-
+ 
   const [ints, setInts] = useState([1,2,3,4]);
-  
+
   function addValue(){
     const newVal = Math.max(...ints) + 1;
     setInts([...ints, newVal])

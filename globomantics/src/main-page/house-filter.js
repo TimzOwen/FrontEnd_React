@@ -25,3 +25,5 @@ const HouseFilter = ({allHouses}) => {
         </div> 
     )
 }
+
+export default HouseFilter;

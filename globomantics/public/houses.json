@@ -13,7 +13,7 @@
         "country":"Nairobi",
         "description":"cool chilled place",
         "price": 670000,
-        "photo":123321
+        "photo":462358
     },
     {
         "id":3,
@@ -21,7 +21,7 @@
         "country":"Westlands",
         "description":"A place with greact community",
         "price": 250000,
-        "photo":321123
+        "photo":534182
     },
     {
         "id":4,
@@ -29,7 +29,15 @@
         "country":"Thika",
         "description":"Multi highway busy road",
         "price": 80000,
-        "photo":333222
+        "photo":164558
+    },
+    {
+        "id":5,
+        "address":"18 Kayole",
+        "country":"Uganda",
+        "description":"Well maintained community of players and sports",
+        "price": 456789,
+        "photo":259600
     }
 
 ]

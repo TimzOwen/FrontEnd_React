@@ -1,6 +1,14 @@
 import "./house.css";
+import { useState } from "react";
+import emailIcon from "./Email.png";
+import Inquiry from "./inquiry";
 
 const House = ({house}) => {
+    const [inquiryShown, setInquiryShown] = useState(false);
+    const inquiryClick = () => {
+        setInquiryShown(!inquiryShown);
+    }; 
+
     return ( 
         <div> 
             <div className="row mt-2">
@@ -16,6 +24,11 @@ const House = ({house}) => {
                 <div className="col-md-5">
                     <p className="price">${house.price}</p>
                     <p>{house.description}</p>
+                    <img
+                    src={emailIcon}
+                    alt="inquiry"                
+                    onClick={inquiryClick}/>
+                    {inquiryShown && <Inquiry house={house} />}
                 </div>
             </div>
             <div className="col-md-5">

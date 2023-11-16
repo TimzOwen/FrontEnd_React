@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import './ListGroup.css'
+import sytles from './ListGroup.module.css';
 
 interface Props{
     items: string[];
@@ -15,7 +15,7 @@ function ListGroup({items, heading, onSelectItem}: Props) {
     <>
       <h1>{heading}</h1>
       {items.length === 0 && <p>No items Found </p>}
-      <ul className="list-group">
+      <ul className={[sytles.ListGroup, sytles.container].join(' ')}>
         {items.map((item, index) => (
           <li
             className={

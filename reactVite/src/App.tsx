@@ -5,9 +5,9 @@ function App() {
 
   return (
     <div>
-      <Button>My Button</Button>
+      <Button color="danger" onClick={() => console.log("clicked")}>My Button</Button>
     </div>
   );
 }
  
-export default App;
+export default App; 

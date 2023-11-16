@@ -1,39 +1,43 @@
 import { Fragment, useState } from "react";
-import sytles from './ListGroup.module.css';
+import "./ListGroup.css";
+import styled from "styled-components";
 
-interface Props{
-    items: string[];
-    heading: string;
-    onSelectItem: (items: string) => void;
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const ListItem = styled.li`
+  padding:5px 0;
+`
+
+interface Props {
+  items: string[];
+  heading: string;
+  onSelectItem: (items: string) => void;
 }
 
-function ListGroup({items, heading, onSelectItem}: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-   
 
   return (
     <>
       <h1>{heading}</h1>
       {items.length === 0 && <p>No items Found </p>}
-      <ul className={[sytles.ListGroup, sytles.container].join(' ')}>
+      <List className="list-group">
         {items.map((item, index) => (
-          <li
-            className={
-              selectedIndex === index
-                ? "list-group-item active "
-                : "list-group-item"
-            }
+          <ListItem
             key={item}
-            onClick={() => {(
-                setSelectedIndex(index));
-                onSelectItem(item);
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(item);
             }}
           >
             {" "}
             {item}
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </>
   );
 }

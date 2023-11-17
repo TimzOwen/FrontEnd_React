@@ -1,14 +1,27 @@
 import { useState } from "react";
-import ListGroup from "./components/ListGroup";
-import './App.css'
+import Button from "./components/Button/Button";
+import Like from "./components/Like/Like";
 
 function App() {
 
-  const items = ["New York","Los Angles", "United States","Nairobi","Uganda","Germany"];
+  // const [firstName, setFirstName] = useState('');
+  // const [lastname, setLastName] = useState('');
+
+  /**
+   * avoid deeply nested structures
+   * group related vairbales using objects
+   */
+
+  const [person, setPerson] = useState({
+    firstName: '',
+    lastName: ''
+  });   
+
+  const [isloading, setLoading ] = useState(false);
 
   return (
     <div>
-      <ListGroup heading="Miami" items={items} onSelectItem={() => console.log("cliked")} ></ListGroup>
+      {person.firstName} {person.lastName}
     </div>
   );
 }

@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      <Like onClick={() => console.log("clicked")}> my button</Like>
+      <Like onClick={() => console.log("clicked")}/>
     </div>
   );
 }

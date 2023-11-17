@@ -14,8 +14,8 @@ const Like = ({onClick}: Props ) => {
     onClick();
   }
 
-  if (status) return <div><AiFillHeart color="#ff6b81" size={30} onClick={() => setStatus(false)}/></div>;
-  return <div><AiOutlineHeart size={30} onClick={() => setStatus(true)}/></div>
+  if (status) return <div><AiFillHeart color="#ff6b81" size={30} onClick={toggle}/></div>;
+  return <div><AiOutlineHeart size={30} onClick={toggle}/></div>
 
 };
 

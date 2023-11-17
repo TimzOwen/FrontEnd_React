@@ -4,12 +4,24 @@ import Like from "./components/Like/Like";
 
 function App() {
 
-  const [firstName, setFirstName] = useState('');
-  const [lastname, setLastName] = useState('');
+  // const [firstName, setFirstName] = useState('');
+  // const [lastname, setLastName] = useState('');
+
+  /**
+   * avoid deeply nested structures
+   * group related vairbales using objects
+   */
+
+  const [person, setPerson] = useState({
+    firstName: '',
+    lastName: ''
+  });   
+
+  const [isloading, setLoading ] = useState(false);
 
   return (
     <div>
-      {firstName} {lastname}
+      {person.firstName} {person.lastName}
     </div>
   );
 }

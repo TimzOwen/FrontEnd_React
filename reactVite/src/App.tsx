@@ -1,10 +1,11 @@
-import { BsCalendarFill } from "react-icons/bs";
+import Button from "./components/Button/Button";
+import Like from "./components/Like/Like";
 
 function App() {
 
   return (
     <div>
-      <BsCalendarFill color="red" size={70}/>
+      <Like onClick={() => console.log("clicked")}> my button</Like>
     </div>
   );
 }

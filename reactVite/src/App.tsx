@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./components/Button/Button";
 import Like from "./components/Like/Like";
+import Message from "./Message";
 
 function App() {
 
@@ -21,7 +22,11 @@ function App() {
 
   return (
     <div>
-      {person.firstName} {person.lastName}
+      {/* {person.firstName} {person.lastName} */}
+      <Message/>
+      <Message/>
+      <Message/>
+      <Message/>
     </div>
   );
 }

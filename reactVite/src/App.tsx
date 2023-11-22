@@ -2,22 +2,17 @@ import { useState } from "react";
 import Button from "./components/Button/Button";
 import Like from "./components/Like/Like";
 import Message from "./Message";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 function App() {
-  const [tags, setTags] = useState(["Happy","Sad","Moody"]);
+  const [cartItems, setCartItems] =useState(['product1', 'product2']);
 
-  const handleClick = () => {
-    //Add
-    setTags([...tags, "Jumpy"]);
-    // Remove
-    setTags(tags.filter(tag =>tag !=='happy'));
-    //update  
-    setTags(tags.map(tag => tag ==='happy' ? 'hapiness' : tag));
-  }
 
   return (
     <div>
-      <button onClick={handleClick}>Click Me</button>
+      <NavBar cartItemsCount={cartItems.length}/>
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
     </div>
   );
 }

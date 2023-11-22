@@ -5,28 +5,26 @@ import Message from "./Message";
 
 function App() {
 
-  // const [firstName, setFirstName] = useState('');
-  // const [lastname, setLastName] = useState('');
+  const [drink, setDrink] = useState({
+    title: "Americano",
+    price: 5,
+  });
 
-  /**
-   * avoid deeply nested structures
-   * group related vairbales using objects
-   */
+  const handleClick = () => {
+    const newDrink = {
+      title: drink.title, // or ...drink   --> doest change this values
+      price: 10
+    }
+    setDrink(newDrink);
 
-  const [person, setPerson] = useState({
-    firstName: '',
-    lastName: '' 
-  });   
-
-  const [isloading, setLoading ] = useState(false);
+    // one line object
+    // setDrink({...drink, price:14});
+  };
 
   return (
     <div>
-      {/* {person.firstName} {person.lastName} */}
-      <Message/>
-      <Message/>
-      <Message/>
-      <Message/>
+      {drink.price}
+      <button onClick={handleClick} >Click Me</button>
     </div>
   );
 }

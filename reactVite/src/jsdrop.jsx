@@ -132,7 +132,7 @@ function App(){
 
 ReactDOM.render(
  <App/>,
-  document.getElementById('mountNode'),
+  document.getElementById('mountNode'), 
 );
 
 // *** The React 18 way:

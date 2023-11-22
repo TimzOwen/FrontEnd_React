@@ -1,29 +1,20 @@
 import { useState } from "react";
 import Button from "./components/Button/Button";
 import Like from "./components/Like/Like";
+import Message from "./Message";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 function App() {
+  const [cartItems, setCartItems] =useState(['product1', 'product2']);
 
-  // const [firstName, setFirstName] = useState('');
-  // const [lastname, setLastName] = useState('');
-
-  /**
-   * avoid deeply nested structures
-   * group related vairbales using objects
-   */
-
-  const [person, setPerson] = useState({
-    firstName: '',
-    lastName: '' 
-  });   
-
-  const [isloading, setLoading ] = useState(false);
 
   return (
     <div>
-      {person.firstName} {person.lastName}
+      <NavBar cartItemsCount={cartItems.length}/>
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])}/>
     </div>
   );
 }
- 
-export default App; 
+
+export default App;
